@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Patatap</title>
+  <link rel="stylesheet" href="circles.css">
+  <script type="text/javascript" src="paper-full.js"></script>
+  <script type="text/paperscript" canvas="myCanvas">
+
+// var rows = 10;
+// var cols = 10;
+
+// var x;
+// var y;
+
+// var xStart = 50;
+// var yStart = 50;
+
+// var xSpacing = 100;
+// var ySpacing = 100;
+
+// var radius = 50;
+// var fillColor = 'blue';
+
+// // Make 20 copies of the circle:
+// for (var row = 1; row <= rows; row++) {
+//   y = yStart + (row -1) * ySpacing;
+//   // console.log("y is " + y);
+//   for(var col = 1; col <= cols; col++) {
+//     x = xStart + (col - 1) * xSpacing;
+//     console.log("x is " + x);
+//     new Path.Circle(new Point(x, y), radius).fillColor = fillColor;
+//   }
+// }
+
+// proto1 = new Path([
+//     new Point(0, -24),
+//     new Point(0, 24),
+//     new Point(42, 0)
+//     ]);
+// proto1.closed = true;
+// console.log(proto1);
+
+// proto2 = proto1.clone();
+// proto2.rotate(180);
+
+
+// function putTriangle(pos, rotate) {
+//     var tri = (rotate ? proto2 : proto1).clone();
+//     tri.position = pos;
+//     tri.position = tri.position.subtract([21, 0])
+//     tri.fillColor = {
+//         hue: Math.random() * 360,
+//         saturation: 0,
+//         brightness: Math.random() * 0.5 + 0.5
+//     }
+// }
+// var tris = [],
+//     x = 42,
+//     y = 24,
+//     rotate,
+//     winWidth = paper.view.size.width,
+//     winHeight = paper.view.size.height,
+//     rows = (winHeight + 48) / 24,
+//     cols = (winWidth + 42) / 42,
+//     numTri = rows * cols,
+//     numTriOrig = (winWidth + 42) / 42 * (winHeight + 48 / 24);
+
+//     x = 0;
+//     y = 0;
+
+// for (var row = 0; row < rows; row++) {
+//     rowrotate = row % 2;
+//     for (var col = 0; col <= cols; col++) {
+//         rotate = rowrotate ^ col % 2;
+//         putTriangle([x,y], rotate);
+//         x += 42;
+//     }
+//     x = 0;
+//     y = y + 24;
+// }
+
+// console.log(numTri, numTriOrig);
+for(var x = 0; x < 1000; x+=50) {
+  for(var y = 0; y < 1000; y+=50) {
+    var circle = new Path.Circle(new Point(x, y), 10);
+    circle.fillColor = {
+    hue: Math.random() * 360
+    };
+  }
+}
+
+
+
+
+
+</script>
+</head>
+<body>
+  <canvas id="myCanvas" resize="true"></canvas>
+</body>
+</html>
